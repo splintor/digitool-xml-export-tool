@@ -175,9 +175,6 @@ function getDataFromFileText(fileText, sourceFile) {
     }
 }
 
-function getFieldData(fieldName, record, sourceFile) {
-}
-
 function safeRequire(libName) {
     try {
         return require(libName);
