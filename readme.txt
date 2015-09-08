@@ -2,5 +2,5 @@ digitool-xml-export-tool is a tool to export data from XML files exported from E
 
 It uses nodes.js (https://nodejs.org), and requires installation of shelljs node module (using "npm install shelljs").
 
-Tool ssage:
+Tool usage:
 	node export-digitool-xml.js [-s <source>] [-o <output CSV file>]
