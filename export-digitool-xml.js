@@ -118,6 +118,7 @@ function getDataFromXmlFile(sourceFile) {
 function getDataFromFileText(fileText, sourceFile) {
     var innerXml;
     var error;
+    var data;
     new xml2js.Parser().parseString(fileText, function xmlParseCallback(err, result) {
         if (err) {
             error = "Failed to parse '" + sourceFile + "' text.\nerr: " + err + "\file text: " + fileText;
@@ -167,12 +168,14 @@ function getDataFromFileText(fileText, sourceFile) {
             return '"' + data + '"';
         })
 
-        return d.join();
+        data = d.join();
     });
 
     if(error) {
         throw error;
     }
+
+    return data;
 }
 
 function safeRequire(libName) {
